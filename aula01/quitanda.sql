@@ -51,7 +51,10 @@ SELECT nome,
 DATE_FORMAT(data_validade, '%d/%m/%Y') AS data_validade
 FROM tb_produtos;
 
+SELECT nome, CONCAT('R$ ', FORMAT(preco, 2, 'pt_BR')) AS preco FROM tb_produtos;
+
 UPDATE  tb_produtos SET preco = 9.50 WHERE id = 2;
 
 DELETE FROM tb_produtos WHERE id = 6;
+
 
